@@ -46,7 +46,7 @@ jobs:
 
       - name: Create Theme ZIP
         run: |
-          zip -r **NOM_DEPOT_GITHUB**.zip * .[^.]* -x ".git/*" ".github/*" "README.md" "*.zip"
+          zip -r n8n.zip * .[^.]* -x ".git/*" ".github/*" "README.md" "*.zip"
 
       - name: Commit Changes
         run: |
@@ -70,7 +70,7 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            **NOM_DEPOT_GITHUB**.zip
+            n8n.zip
             version.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
